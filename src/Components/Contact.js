@@ -78,7 +78,7 @@ const Contact = () => {
                                             </div>
                                             <div className="row">
                                                 <div className="col-12 col-md-6 contact-input">
-                                                    <input type="text" className="form-control" name="phone" id="phone" defaultValue={userData.phone} onChange={postUserData} placeholder="Phone Number"/>
+                                                    <input type="text" className="form-control" name="phone" id="phone" value={userData.phone} onChange={postUserData} placeholder="Phone Number"/>
                                                 </div>
                                                 <div className="col-12 col-md-6 contact-input">
                                                     <input type="email" className="form-control" name="email" id="email" value={userData.email} onChange={postUserData} placeholder="Email"/>
