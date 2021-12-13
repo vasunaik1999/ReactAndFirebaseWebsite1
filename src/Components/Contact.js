@@ -23,8 +23,8 @@ const Contact = () => {
         event.preventDefault();
         const {firstName, lastName, phone, email, address, message} = userData;
         
-        // if(firstName && lastName && phone && email && address && message)
-        // {
+        if(firstName && lastName && phone && email && address && message)
+        {
             const res = await fetch(
                 "https://reactfirebasewebsite-1dc5e-default-rtdb.firebaseio.com/contactForm.json",
                 {
@@ -49,9 +49,9 @@ const Contact = () => {
             }else{
                 alert("please fill the data");
             }       
-        // } else{
-        //     alert("please fill the data");
-        // }  
+        } else{
+            alert("please fill the data");
+        }  
     };
     return (
         <>
@@ -78,10 +78,10 @@ const Contact = () => {
                                             </div>
                                             <div className="row">
                                                 <div className="col-12 col-md-6 contact-input">
-                                                    <input type="text" className="form-control" name="phone" id="phone" defaultValue={userData.phone} onChnage={postUserData} placeholder="Phone Number"/>
+                                                    <input type="text" className="form-control" name="phone" id="phone" defaultValue={userData.phone} onChange={postUserData} placeholder="Phone Number"/>
                                                 </div>
                                                 <div className="col-12 col-md-6 contact-input">
-                                                    <input type="email" className="form-control" name="email" id="email" value={userData.email} onChnage={postUserData} placeholder="Email"/>
+                                                    <input type="email" className="form-control" name="email" id="email" value={userData.email} onChange={postUserData} placeholder="Email"/>
                                                 </div>
                                             </div>
                                             <div className="row">
