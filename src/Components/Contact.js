@@ -23,8 +23,8 @@ const Contact = () => {
         event.preventDefault();
         const {firstName, lastName, phone, email, address, message} = userData;
         
-        if(firstName && lastName && phone && email && address && message)
-        {
+        // if(firstName && lastName && phone && email && address && message)
+        // {
             const res = await fetch(
                 "https://reactfirebasewebsite-1dc5e-default-rtdb.firebaseio.com/contactForm.json",
                 {
@@ -49,9 +49,9 @@ const Contact = () => {
             }else{
                 alert("please fill the data");
             }       
-        } else{
-            alert("please fill the data");
-        }  
+        // } else{
+        //     alert("please fill the data");
+        // }  
     };
     return (
         <>
@@ -65,7 +65,7 @@ const Contact = () => {
                                     <p className="main-hero-para">Lorem ipsum dolor sit amet, consectetur adipiscing. sit amet, consectetur adipiscing.</p>
                                     <img src="/images/image2.jpg" alt="" width="50%" height="40%" />
                                 </div>
-                                <div className="contact-rightside col-12 col-lg-7">
+                                 <div className="contact-rightside col-12 col-lg-7">
                                     <form method="POST">
                                         <div className="container">
                                             <div className="row">
@@ -81,7 +81,7 @@ const Contact = () => {
                                                     <input type="text" className="form-control" name="phone" id="phone" defaultValue={userData.phone} onChnage={postUserData} placeholder="Phone Number"/>
                                                 </div>
                                                 <div className="col-12 col-md-6 contact-input">
-                                                    <input type="email" className="form-control" name="email" id="email" defaultValue={userData.email} onChnage={postUserData} placeholder="Email"/>
+                                                    <input type="email" className="form-control" name="email" id="email" value={userData.email} onChnage={postUserData} placeholder="Email"/>
                                                 </div>
                                             </div>
                                             <div className="row">
